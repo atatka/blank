@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>blank</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <p>This page intentionally left blank 😐</p>
-</body>
+  <body>
+    <div id="hackme">
+      <p>This page intentionally left <span id="wild">blank</span> 😐</p>
+    </div>
+    <style
+      contenteditable
+      style="
+        display: block;
+        white-space: pre;
+        font-family: serif;
+        font-size: 10px;
+      "
+    >
+      body {
+        font-family: monospace;
+        line-height: 1.5;
+        padding: 1em 2em;
+        background-color: #e0e0e0;
+      }
 
+      #hackme {
+        border: 1px dotted black;
+      }
+
+      @keyframes color {
+        0% {
+          color: HotPink;
+        }
+        25% {
+          color: SpringGreen;
+        }
+        50% {
+          color: DarkGoldenrod;
+        }
+        75% {
+          color: WhiteSmoke;
+        }
+        100% {
+          color: RoyalBlue;
+        }
+      }
+
+      #wild {
+        animation: color 15s infinite;
+      }
+
+      p {
+        color: #000;
+        text-shadow: #ccc 1px 1px 1px;
+        text-align: center;
+      }
+    </style>
+  </body>
 </html>
